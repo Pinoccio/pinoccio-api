@@ -1,0 +1,43 @@
+{
+  "name": "pinoccio-api",
+  "version": "0.0.0",
+  "description": "Pinoccio API rest/websocket services",
+  "main": "index.js",
+  "bin": {},
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "ecstatic": "^0.7.2",
+    "mux-demux": "^3.7.9",
+    "rpc-stream": "^2.1.1",
+    "shoe": "0.0.15",
+    "through2": "^0.6.5",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "pinoccio-db": "0.0.1",
+    "tape": "~0.3.5"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soldair/pinoccio-api.git"
+  },
+  "homepage": "https://github.com/soldair/pinoccio-api",
+  "keywords": [
+    ""
+  ],
+  "author": {
+    "name": "Ryan Day",
+    "email": "soldair@gmail.com",
+    "url": "https://github.com/soldair"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
+}
