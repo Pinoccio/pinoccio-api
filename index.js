@@ -15,7 +15,7 @@ var makeRoutes = require('./lib/routes');
 module.exports = function(db,options){
   options = options||{};
 
-
+  var boards = {};
   var routes = makeRoutes(options.routes)
 
   // add time to logs.
@@ -23,7 +23,7 @@ module.exports = function(db,options){
     cb(false,{log:data,time:Date.now()})
   });
 
-  var handler = commonHandler(db,routes);
+  var handler = commonHandler(db,boards,routes);
 
   var servers = [];
 
@@ -48,7 +48,6 @@ module.exports = function(db,options){
 
   //"port":22756,
   //"ssl-port":22757,
-
 
   boardServers.push(net.createServer(boardHandler(db))
   .listen(22756,function(err){

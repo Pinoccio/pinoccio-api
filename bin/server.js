@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var db = require('pinoccio-db')(__dirname+'/db');
 
 var server = require('../');
