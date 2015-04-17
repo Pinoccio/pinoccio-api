@@ -11,6 +11,7 @@
   "dependencies": {
     "ecstatic": "^0.7.2",
     "mux-demux": "^3.7.9",
+    "paramify": "^0.1.2",
     "pinoccio-server": "^0.1.0",
     "rpc-stream": "^2.1.1",
     "shoe": "0.0.15",

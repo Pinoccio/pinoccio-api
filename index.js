@@ -9,17 +9,21 @@ var webSocketHandler = require('./lib/wshandler');
 var commonHandler = require('./lib/commonhandler');
 var boardHandler = require('./lib/boardhandler.js');
 
+var makeRoutes = require('./lib/routes');
 // expects a pinoccio-db object.
 
 module.exports = function(db,options){
   options = options||{};
+
+
+  var routes = makeRoutes(options.routes)
 
   // add time to logs.
   var o = through2.obj(function(data,enc,cb){
     cb(false,{log:data,time:Date.now()})
   });
 
-  var handler = commonHandler();
+  var handler = commonHandler(db,routes);
 
   var servers = [];
 
@@ -30,7 +34,6 @@ module.exports = function(db,options){
   }));
 
   // todo add https server if cert is in options.
-
 
   var shoeServer = shoe(webSocketHandler(handler));
 
