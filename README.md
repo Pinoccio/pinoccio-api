@@ -6,5 +6,11 @@ pinoccio-api
 
 pinoccio api server. 
 
+right now the http handler is mostly done. the service endpoints have changed only slightly. services related to accounts do not exist. this is up to you.
+
+rest
+----
+
+TODO  
 
 

@@ -49,7 +49,7 @@ module.exports = function(db,options){
   //"port":22756,
   //"ssl-port":22757,
 
-  boardServers.push(net.createServer(boardHandler(db))
+  boardServers.push(net.createServer(boardHandler(db,boards))
   .listen(22756,function(err){
     if(err) o.emit('error',err);
     else o.log(["boardSerrver",this.address()]);

@@ -12,16 +12,16 @@
     "ecstatic": "^0.7.2",
     "mux-demux": "^3.7.9",
     "paramify": "^0.1.2",
-    "pinoccio-server": "^0.1.0",
+    "pinoccio-server": "^0.1.1",
     "rpc-stream": "^2.1.1",
     "shoe": "0.0.15",
     "through2": "^0.6.5",
-    "xtend": "^4.0.0"
+    "xtend": "^4.0.0",
+    "pinoccio-db": "~0.0.4"
   },
   "devDependencies": {
     "levelup": "^0.19.0",
     "memdown": "^1.0.0",
-    "pinoccio-db": "0.0.1",
     "standard": "^3.5.0",
     "tape": "^4.0.0"
   },
